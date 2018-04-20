@@ -2,7 +2,7 @@ import os
 
 
 def main():
-    folder_path = 'e:/HandBreak_Videos/'
+    folder_path = 'e:/training/waiting_to_convert/Justin Cener - Dropship Bootcamp/'
     error_path = folder_path + 'error/'
     error_file_name = 'error.log'
     error_file_path = folder_path + error_file_name
@@ -26,7 +26,7 @@ def main():
                 os.rename(folder_path + error_file_name, new_error_file)
                 print('Error found in video file integrity! Moved to error folder.')
 
-            print('Files: {}/{} Errors: {} Error file size: {:5} File: {}'.format(progress, files_num, error_counter,
+            print('Files: {:3}/{:3} Errors: {:2} Error file size: {:5} File: {}'.format(progress, files_num, error_counter,
                                                                                   error_file_size, video_file))
 
     os.remove(error_file_path)
